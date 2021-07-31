@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.NewAccountFragment"
+    android:background="@color/teal_050">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/createUsrTxtEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="monospace"
+        android:text="@string/create_new_user"
+        android:textColor="@color/dark_grey"
+        android:textStyle="bold"
+        android:textSize="35dp"/>
+
+    <EditText
+        android:id="@+id/createUsrTxtEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:hint="@string/username"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/createPasswordTxtEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/createUsrTxtEdit"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:hint="@string/password"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/repeatPasswordTxtEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/createPasswordTxtEdit"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:hint="@string/repeat_password"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/createBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="@string/create"
+        android:textColor="@color/teal_050"
+        android:backgroundTint="@color/teal_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createPasswordTxtEdit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

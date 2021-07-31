@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">GameR</string>
+    <string name="login">Login Page</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="create_new_user">Create New User</string>
+    <string name="create">create</string>
+    <string name="sign_up">sign up</string>
+    <string name="sign_in">Sign in</string>
+    <string name="repeat_password">repeat password</string>
+    <string name="even_or_odd">even or odd</string>
+    <string name="heads_n_tails">heads n\' tails</string>
+    <string name="tic_tac_toe">tic tac toe</string>
+    <string name="logged_user">Logged User</string>
+    <string name="settings">settings</string>
+    <string name="terms_amp_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="search">Search</string>
+</resources>
