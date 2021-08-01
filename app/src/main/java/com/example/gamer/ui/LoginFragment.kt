@@ -40,21 +40,25 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.loginBtn.setOnClickListener {
-            val username = binding.usernameTxtEdit.text.toString()
-            val password = binding.passwordTxtEdit.text.toString()
-
-            val user = Data.users.find{ user -> user.username == username && user.password == password  }
-
-            if(user == null){
-                makeText(context, "Wrong username or password", LENGTH_LONG).show()
-            }else{
-                Data.currentUser = user
-                val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment(username)
-                findNavController().navigate(action)
-            }
+            login()
         }
         binding.newUserBtn.setOnClickListener {
             val action = LoginFragmentDirections.actionLoginFragmentToNewAccountFragment()
+            findNavController().navigate(action)
+        }
+    }
+
+    private fun login(){
+        val username = binding.usernameTxtEdit.text.toString()
+        val password = binding.passwordTxtEdit.text.toString()
+
+        val user = Data.users.find{ user -> user.username == username && user.password == password  }
+
+        if(user == null){
+            makeText(context, "Wrong username or password", LENGTH_LONG).show()
+        }else{
+            Data.currentUser = user
+            val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment(username)
             findNavController().navigate(action)
         }
     }

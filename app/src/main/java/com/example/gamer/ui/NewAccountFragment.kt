@@ -34,16 +34,30 @@ class NewAccountFragment : Fragment(R.layout.fragment_new_account) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        binding.createBtn.setOnClickListener{
-            val username = binding.createUsrTxtEdit.text.toString()
-            val password = binding.createPasswordTxtEdit.text.toString()
-
-            Data.users.add(User(username, password))
-
-
-            val action = NewAccountFragmentDirections.actionNewAccountFragmentToLoginFragment()
-            findNavController().navigate(action)
+        binding.createBtn.setOnClickListener {
+            newUser()
         }
+    }
+
+    private fun newUser(){
+        val username = binding.createUsrTxtEdit.text.toString()
+        val password = binding.createPasswordTxtEdit.text.toString()
+
+        val exists = Data.users.find { user -> user.username == username }
+
+        if (exists != null) {
+            Toast.makeText(context, "User already exists", Toast.LENGTH_LONG).show()
+            return
+        }
+
+        if(username == "" || password == ""){
+            Toast.makeText(context, "Something is missing", Toast.LENGTH_LONG).show()
+            return
+        }
+
+        Data.users.add(User(username, password))
+
+        val action = NewAccountFragmentDirections.actionNewAccountFragmentToLoginFragment()
+        findNavController().navigate(action)
     }
 }
