@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.gamer.R
-import com.example.gamer.databinding.FragmentHeadsNTailsBinding
 import com.example.gamer.databinding.FragmentRockScissorPaperBinding
 
 class RockScissorPaperFragment : Fragment(R.layout.fragment_rock_scissor_paper){
