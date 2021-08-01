@@ -43,5 +43,15 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             findNavController().navigate(action)
         }
 
+        binding.rockPaperScissorBtn.setOnClickListener{
+            val action = HomeFragmentDirections.actionHomeFragmentToRockScissorPaperFragment()
+            findNavController().navigate(action)
+        }
+
+        binding.ticTacToeBtn.setOnClickListener{
+            val action = HomeFragmentDirections.actionHomeFragmentToEvenOrOddFragment()
+            findNavController().navigate(action)
+        }
+
     }
 }

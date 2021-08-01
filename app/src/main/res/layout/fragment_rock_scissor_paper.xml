@@ -4,13 +4,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_grey">
+    android:background="@color/yellow"
+    tools:context=".ui.RockScissorPaperFragment">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="352dp"
-        android:layout_height="255dp"
-        app:srcCompat="@drawable/rockscissorpaper"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="27dp" />
+        android:id="@+id/playerImg"
+        android:layout_width="160dp"
+        android:layout_height="170dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/opponentImg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rock" />
+
+    <ImageView
+        android:id="@+id/opponentImg"
+        android:layout_width="160dp"
+        android:layout_height="170dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/playerImg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/scissors" />
+
+    <Button
+        android:id="@+id/rockBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/dark_grey"
+        android:fontFamily="monospace"
+        android:text="@string/rock"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/paperBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerImg"
+        app:layout_constraintVertical_bias="0.715" />
+
+    <Button
+        android:id="@+id/paperBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/dark_grey"
+        android:fontFamily="monospace"
+        android:text="@string/paper"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/scissorBtn"
+        app:layout_constraintStart_toEndOf="@+id/rockBtn"
+        app:layout_constraintTop_toBottomOf="@+id/playerImg" />
+
+    <Button
+        android:id="@+id/scissorBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/dark_grey"
+        android:fontFamily="monospace"
+        android:text="@string/scissor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/paperBtn"
+        app:layout_constraintTop_toBottomOf="@+id/opponentImg"
+        app:layout_constraintVertical_bias="0.715" />
+
+    <TextView
+        android:id="@+id/resultTxt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/playerImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:textSize="30dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -44,16 +44,6 @@
         android:hint="@string/password"
         android:textAlignment="center"/>
 
-    <EditText
-        android:id="@+id/repeatPasswordTxtEdit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/createPasswordTxtEdit"
-        android:layout_marginLeft="45dp"
-        android:layout_marginRight="45dp"
-        android:hint="@string/repeat_password"
-        android:textAlignment="center"/>
-
     <Button
         android:id="@+id/createBtn"
         android:layout_width="wrap_content"

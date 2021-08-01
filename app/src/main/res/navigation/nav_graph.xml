@@ -24,6 +24,8 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <argument android:name="username"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/newAccountFragment"
@@ -46,9 +48,6 @@
         <argument
             android:name="username"
             app:argType="string" />
-        <argument
-            android:name="password"
-            app:argType="string" />
         <action
             android:id="@+id/action_homeFragment_to_loginFragment"
             app:destination="@id/loginFragment"
@@ -63,10 +62,34 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_rockScissorPaperFragment"
+            app:destination="@id/rockScissorPaperFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_evenOrOddFragment"
+            app:destination="@id/evenOrOddFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/headsNTailsFragment"
         android:name="com.example.gamer.ui.HeadsNTailsFragment"
         android:label="Heads n' Tails"
         tools:layout="@layout/fragment_heads_n_tails" />
+    <fragment
+        android:id="@+id/rockScissorPaperFragment"
+        android:name="com.example.gamer.ui.RockScissorPaperFragment"
+        android:label="Rock, Paper n' Scissor"
+        tools:layout="@layout/fragment_rock_scissor_paper" />
+    <fragment
+        android:id="@+id/evenOrOddFragment"
+        android:name="com.example.gamer.ui.EvenOrOddFragment"
+        android:label="Even or Odd"
+        tools:layout="@layout/fragment_even_or_odd" />
 </navigation>

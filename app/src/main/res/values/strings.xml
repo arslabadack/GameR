@@ -15,4 +15,7 @@
     <string name="settings">settings</string>
     <string name="terms_amp_conditions"><![CDATA[Terms & Conditions]]></string>
     <string name="search">Search</string>
+    <string name="rock">rock</string>
+    <string name="paper">paper</string>
+    <string name="scissor">scissor</string>
 </resources>

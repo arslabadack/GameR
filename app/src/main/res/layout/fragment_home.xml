@@ -11,7 +11,7 @@
         android:id="@+id/userTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/evenOrOddBtn"
+        app:layout_constraintBottom_toTopOf="@+id/rockPaperScissorBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,7 +22,7 @@
         android:textSize="35dp"/>
 
     <Button
-        android:id="@+id/evenOrOddBtn"
+        android:id="@+id/rockPaperScissorBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -31,7 +31,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:backgroundTint="@color/teal_700"
         android:fontFamily="monospace"
-        android:text="@string/even_or_odd"/>
+        android:text="Rock Paper Scissor"/>
 
     <Button
         android:id="@+id/headsNTailsBtn"
@@ -40,7 +40,7 @@
         app:layout_constraintBottom_toTopOf="@+id/ticTacToeBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/evenOrOddBtn"
+        app:layout_constraintTop_toBottomOf="@+id/rockPaperScissorBtn"
         android:backgroundTint="@color/teal_700"
         android:fontFamily="monospace"
         android:text="@string/heads_n_tails"/>
@@ -51,10 +51,10 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/teal_700"
         android:fontFamily="monospace"
-        android:text="@string/tic_tac_toe"
+        android:text="@string/even_or_odd"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/evenOrOddBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/rockPaperScissorBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
