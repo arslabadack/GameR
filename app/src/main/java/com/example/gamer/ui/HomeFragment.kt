@@ -11,13 +11,12 @@ import androidx.navigation.fragment.navArgs
 import com.example.gamer.R
 import com.example.gamer.databinding.FragmentHomeBinding
 import com.example.gamer.databinding.FragmentLoginBinding
+import com.example.gamer.util.Data
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
-
-    private val args: HomeFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,7 +35,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.userTxt.text = args.username
+        binding.userTxt.text = Data.currentUser?.username
 
         binding.headsNTailsBtn.setOnClickListener{
             val action = HomeFragmentDirections.actionHomeFragmentToHeadsNTailsFragment()

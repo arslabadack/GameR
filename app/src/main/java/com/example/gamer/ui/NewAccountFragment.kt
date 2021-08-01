@@ -14,8 +14,6 @@ import com.example.gamer.util.User
 
 class NewAccountFragment : Fragment(R.layout.fragment_new_account) {
 
-    private val user = Data
-
     private var _binding: FragmentNewAccountBinding? = null
     private val binding get() = _binding!!
 
@@ -38,14 +36,14 @@ class NewAccountFragment : Fragment(R.layout.fragment_new_account) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.createBtn.setOnClickListener{
-            val username = binding.createUsrTxtEdit.toString()
-            val password = binding.createPasswordTxtEdit.toString()
+            val username = binding.createUsrTxtEdit.text.toString()
+            val password = binding.createPasswordTxtEdit.text.toString()
 
-            user.users.add(User(username, password))
+            Data.users.add(User(username, password))
 
-            val action = NewAccountFragmentDirections.actionNewAccountFragmentToLoginFragment(username)
+
+            val action = NewAccountFragmentDirections.actionNewAccountFragmentToLoginFragment()
             findNavController().navigate(action)
-
         }
     }
 }
